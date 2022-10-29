@@ -19,4 +19,14 @@ export class PensamentoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * APLICANDO OS ESTILOS DE FORMA DINÂMICA
+   */
+  larguraPensamento(): string {
+    if(this.pensamento.conteudo.length >= 256){
+        return 'pensamento-g'
+    }
+        return 'pensamento-p'
+  }
+
 }
