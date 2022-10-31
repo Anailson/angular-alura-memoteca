@@ -1,0 +1,8 @@
+Criando uma pasta nome exemplo - backend
+Roda os seguintes comandos
+1-npm init -y
+2-npm i json-server
+
+Criar um arquivo com o nome
+1-Criaremos dentro da pasta backend o arquivo db.json, que conterá todos os recursos (ou endpoints) da
+API. Acessaremos o arquivo e criaremos um objeto que possuirá um arranjo de pensamentos.
