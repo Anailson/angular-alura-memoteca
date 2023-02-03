@@ -1,3 +1,4 @@
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { PensamentoService } from './../pensamento.service';
 import { Pensamento } from './../pensamento/pensamento';
 import { Component, OnInit } from '@angular/core';
@@ -16,13 +17,22 @@ export class CriarPensamentoComponent implements OnInit {
       autoria: ' ',
       modelo:'modelo1'
   }
+
+  formulario?:FormGroup;
+
 //cancelarPensamento
   constructor(
     private service: PensamentoService,
-    private router: Router
+    private router: Router,
+    private formBuilder: FormBuilder
     ) { }
 
   ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      conteudo:['formulario reactivo'],
+      autoria:[''],
+      modelo:['modelo1']
+    })
   }
 
   criarPensamento(){
