@@ -11,14 +11,8 @@ import { Router } from '@angular/router';
 })
 export class CriarPensamentoComponent implements OnInit {
 
-  pensamento: Pensamento = {
-     // id: 1,
-      conteudo: ' ',
-      autoria: ' ',
-      modelo:'modelo1'
-  }
 
-  formulario?:FormGroup;
+  formulario!:FormGroup;
 
 //cancelarPensamento
   constructor(
@@ -30,13 +24,13 @@ export class CriarPensamentoComponent implements OnInit {
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
       conteudo:['formulario reactivo'],
-      autoria:[''],
+      autoria:['Angular'],
       modelo:['modelo1']
     })
   }
 
   criarPensamento(){
-    this.service.criar(this.pensamento).subscribe(() =>{
+    this.service.criar(this.formulario?.value).subscribe(() =>{
        this.router.navigate(['/listarPensamento'])  //Apos criar um novo pensamento é feita a router para a lista dos pensamentos
     })
     // alert("Novo pensamentos criado");
