@@ -23,15 +23,21 @@ export class CriarPensamentoComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      conteudo:['', [Validators.required]],
-      autoria:['', [Validators.required]],
+      conteudo:['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+      autoria:['',Validators.compose([
+        Validators.required,
+        Validators.minLength(3)
+      ])],
       modelo:['modelo1']
     })
   }
 
   criarPensamento(){
     console.log(this.formulario);
-    if(this.formulario.valid){
+    if(this.formulario.valid){//ser o formulario for valido o pensamento é criado
       this.service.criar(this.formulario?.value).subscribe(() =>{
         this.router.navigate(['/listarPensamento'])  //Apos criar um novo pensamento é feita a router para a lista dos pensamentos
      })    }
