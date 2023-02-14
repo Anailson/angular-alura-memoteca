@@ -25,28 +25,16 @@
       "id": 4
     },
     {
-      "conteudo": " asfsa",
-      "autoria": " fsasdsdfsfsfsfsd",
-      "modelo": "modelo2",
-      "id": 5
-    },
-    {
-      "conteudo": " ",
-      "autoria": " ",
-      "modelo": "modelo1",
-      "id": 6
-    },
-    {
       "conteudo": "java",
       "autoria": "spring",
       "modelo": "modelo1",
       "id": 7
     },
     {
-      "conteudo": "",
-      "autoria": "",
+      "conteudo": "Que a força esteja com vc",
+      "autoria": "Mestre",
       "modelo": "modelo1",
-      "id": 8
+      "id": 9
     }
   ]
 }
